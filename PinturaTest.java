@@ -7,21 +7,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class PinturaTest {
     @Test
     void testPintura(){
-        Pintura pintura = new Pintura(10);
+        Pintura pintura = new Pintura(250);
 
-        Forma rectangulo = new Rectangulo("Rectangulo", 10, 5);
-        double salidaEsperada = (10 * 5) / 10;
+        Forma rectangulo = new Rectangulo("Rectangulo", 35, 20);
+        double salidaEsperada = 2.8;
         double salidaRecibida = pintura.calcularPintura(rectangulo);
-        assertEquals(salidaEsperada, salidaRecibida);
+        assertEquals(salidaEsperada, salidaRecibida, 0.001);
 
-        Forma esfera = new Esfera("Esfera", 6);
-        salidaEsperada = (4 * Math.PI * 6 * 6) / 10;
+        Forma esfera = new Esfera("Esfera", 15);
+        salidaEsperada = 11.309;
         salidaRecibida = pintura.calcularPintura(esfera);
-        assertEquals(salidaEsperada, salidaRecibida);
+        assertEquals(salidaEsperada, salidaRecibida, 0.001);
 
-        Forma cilindro = new Cilindro("Cilindro", 6, 21);
-        salidaEsperada = (Math.PI * 6 * 6 * 21) / 10;
+        Forma cilindro = new Cilindro("Cilindro", 10, 30);
+        salidaEsperada = 37.699;
         salidaRecibida = pintura.calcularPintura(cilindro);
-        assertEquals(salidaEsperada, salidaRecibida);
+        assertEquals(salidaEsperada, salidaRecibida, 0.001);
     }
 }
