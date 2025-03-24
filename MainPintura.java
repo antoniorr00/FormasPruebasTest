@@ -7,6 +7,10 @@ public class MainPintura{
         Forma esfera = new Esfera("Esfera", 15);
         Forma cilindro = new Cilindro("Cilindro", 10, 30);
 
+        System.out.println("Área rectangulo: " + rectangulo.area());
+        System.out.println("Área esfera: " + esfera.area());
+        System.out.println("Área cilindro: " + cilindro.area());
+
         System.out.println("Pintura necesaria para el rectángulo: " + pintura.calcularPintura(rectangulo));
         System.out.println("Pintura necesaria para la esfera: " + pintura.calcularPintura(esfera));
         System.out.println("Pintura necesaria para el cilindro: " + pintura.calcularPintura(cilindro));
